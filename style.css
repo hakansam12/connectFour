@@ -1,0 +1,243 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@500&display=swap');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body {
+  background-color: rgb(178, 226, 245);
+  
+  background-image: linear-gradient(to bottom,
+      rgb(95, 95, 243),
+      skyblue,
+      rgb(175, 255, 231),
+      rgb(178, 226, 245));
+  background-repeat: no-repeat;
+  font-family: 'Poppins',
+    sans-serif;
+  text-align: center;
+}
+
+.header {
+  margin: 0 auto;
+  font-size: 2.5em;
+  -webkit-text-stroke: 0.1px #ffc934;
+  color: white;
+  text-shadow: black 4px 4px 3px;
+}
+
+span {
+  font-size: 1.5em;
+  -webkit-text-stroke: 0px white;
+  color: red;
+  text-shadow: black 3px 3px 3px;
+}
+
+.info {
+  display: flex;
+  margin: 0 auto 1.5em;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  letter-spacing: 1.3px;
+  text-shadow: black 2px 2px 1px;
+  font-size: 1.25em;
+}
+
+.token {
+  font-size: 2.5em;
+  margin-left: 0.5em;
+}
+
+.btn {
+  border-radius: 5px;
+  padding: 1em 2.25em;
+  border: none;
+  background-color: #808b92;
+  margin: 2em auto;
+  font-family: 'Poppins',
+    sans-serif;
+  cursor: pointer;
+  color: white;
+  letter-spacing: 1.3px;
+  font-size: 1em;
+}
+
+.btn:hover,
+.btn:focus {
+  opacity: 1;
+}
+
+/* game board table */
+#game {
+  width: 100%;
+  margin: auto;
+}
+
+#board {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-collapse: separate;
+}
+
+#column-top,
+.row {
+  border-spacing: 10px 5px;
+}
+
+.row {
+  background-color: #fce300;
+  border: solid 2px #eede06;
+  padding: 0.35em;
+  box-shadow: 7px 7px 28px 0px rgba(50, 50, 50, 0.4);
+
+}
+
+#board td {
+  width: 50px;
+  height: 50px;
+  position: relative;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: inset 7px 7px 20px 0px rgba(102, 102, 102, 0.3);
+}
+
+
+
+.piece {
+ 
+  margin: auto;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  position: absolute;
+  animation: falling 0.5s ease-in;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+}
+
+
+@keyframes falling {
+  0% {
+    -webkit-transform: translateY(-400px);
+    transform: translateY(-400px);
+  }
+
+  100% {
+    -webkit-transform: translateY(0px);
+    transform: translateY(0px);
+  }
+}
+
+
+
+._1 {
+  
+  background: linear-gradient(to bottom, rgb(255, 34, 0) 0%, #be3017 100%);
+}
+
+._2 {
+
+  background: linear-gradient(to bottom, #289ee7 0%, #0f669c 100%);
+}
+
+
+
+#column-top td {
+  border: dashed 1px lightgray;
+  box-shadow: none;
+  opacity: 0.3;
+}
+
+#column-top td:hover {
+  background-color: gold;
+  opacity: .7;
+  cursor: pointer;
+}
+
+@media (min-width: 860px) {
+  #board td {
+    width: 100px;
+    height: 100px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 2.5em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 2em;
+  }
+
+  .btn {
+    font-size: 2em;
+  }
+}
+
+@media (min-width: 1050px) {
+  #board td {
+    width: 120px;
+    height: 120px;
+  }
+}
+
+@media (min-width: 1250px) {
+  #board td {
+    width: 150px;
+    height: 150px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 3em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 2.5em;
+  }
+
+  .btn {
+    font-size: 2.5em;
+  }
+}
+
+@media (min-width: 1650px) {
+  #board td {
+    width: 200px;
+    height: 200px;
+  }
+}
+
+@media (min-width: 2000px) {
+  #board td {
+    width: 250px;
+    height: 250px;
+  }
+
+  .header {
+    font-size: 1.5em;
+    margin-top: 1.5em;
+    font-size: 3.5em;
+  }
+
+  .info {
+    margin: 0 auto 1em;
+    font-size: 3em;
+  }
+
+  .btn {
+    font-size: 3em;
+  }
+}
